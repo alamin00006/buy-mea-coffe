@@ -1,6 +1,7 @@
 import React from 'react';
 import logo1 from '../../../images/logo1.PNG'
 import { Bars3Icon } from '@heroicons/react/24/outline'
+import { Link } from 'react-router-dom';
 const DashboardNavbar = () => {
     return (
         <div className='lg:mx-16'>
@@ -27,7 +28,7 @@ const DashboardNavbar = () => {
                             View my page
                         </a>
                         </li>
-                        <li><a className='text-xl' href='..'>Dashboard</a></li>
+                        <li><Link to="/sideNavbar" className='text-xl'>Dashboard</Link></li>
                         <li><a className='text-xl' href='..'>Creators I follow</a></li>
                         <li><a className='text-xl' href='..'>My Account</a></li>
                         <li><a className='text-xl' href='..'>Logout</a></li>

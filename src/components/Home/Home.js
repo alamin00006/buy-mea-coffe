@@ -10,7 +10,7 @@ const Home = () => {
            <Navbar></Navbar>
            <Banner></Banner>
            <DashboardNavbar></DashboardNavbar>
-           <SideNavbar></SideNavbar>
+           
         </div>
     );
 };
