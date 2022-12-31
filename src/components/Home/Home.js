@@ -1,12 +1,16 @@
 import React from 'react';
-import Banner from './Navbar/Banner/Banner';
+import Banner from './Banner/Banner';
+import DashboardNavbar from './DashboardNavbar/DashboardNavbar';
 import Navbar from './Navbar/Navbar';
+import SideNavbar from './SideNavbar/SideNavbar';
 
 const Home = () => {
     return (
         <div>
            <Navbar></Navbar>
            <Banner></Banner>
+           <DashboardNavbar></DashboardNavbar>
+           
         </div>
     );
 };
