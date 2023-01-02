@@ -1,0 +1,51 @@
+.wish_container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+.wish_list_content{
+    margin-top: 5rem;
+    width: 400px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.wish_list_content > h3 {
+    font-size: 22px;
+    font-weight: 500;
+    letter-spacing: 1px;
+    text-align: center;
+}
+.wish_list_content > p{
+    font-size: 18px;
+    font-weight: 400;
+    letter-spacing: 1px;
+    color: gray;
+    text-align: center;
+}
+.wish_list_content > button {
+    background-color: yellow;
+    padding: 4px;
+    width: 170px;
+    border-radius: 60px;
+    margin-top: 1rem;
+    font-size: 15px;
+    font-weight: 500;
+    letter-spacing: 1px;
+}
+.question_container{
+    margin-top: 5rem;
+    width: 550px;
+}
+.question_container > h1{
+    font-size: 25px;
+    font-weight: 500;
+    letter-spacing: 1px;
+    text-align: center;
+    margin-bottom: 1rem;
+}
+.collapse{
+    margin-bottom: 1rem;
+}
