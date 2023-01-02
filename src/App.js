@@ -12,6 +12,7 @@ import ViewPage from "./components/Home/SideNavbar/ViewPage/ViewPage";
 import Post from "./components/Home/SideNavbar/Post/Post";
 import Gallery from "./components/Home/SideNavbar/Gallery/Gallery";
 import Message from "./components/Home/SideNavbar/Message/Message";
+import Unread from "./components/Home/SideNavbar/Unread/Unread_massage";
 import ButtonGraphics from "./components/Home/SideNavbar/ButtonGraphics/ButtonGraphics";
 import Integrations from "./components/Home/SideNavbar/Integrations/Integrations";
 import Payout from "./components/Home/SideNavbar/Payout/Payout";
@@ -33,6 +34,7 @@ function App() {
         <Route path="post" element={<Post></Post>}></Route>
         <Route path="gallery" element={<Gallery></Gallery>}></Route>
         <Route path="message" element={<Message></Message>}></Route>
+        <Route path="Unread" element={<Unread></Unread>}></Route>
         <Route path="buttonGraphics" element={<ButtonGraphics></ButtonGraphics>}></Route>
         <Route path="integrations" element={<Integrations></Integrations>}></Route>
         <Route path="payouts" element={<Payout></Payout>}></Route>
