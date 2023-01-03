@@ -1,24 +1,11 @@
-import React, { useState } from 'react';
-import { Link } from 'react-router-dom';
+import React from 'react';
+import './DashBoardMassage_edit';
 
-const Message = () => {
-
-    const [isActive, setIsActive] = useState(false);
-    function ShowSearch() {
-
-        setIsActive(isActive => !isActive);
-    };
-    const [click, setclick] = useState(false);
-    function Messaging() {
-
-        setclick(click => !click);
-    };
-    const[option, setoption]= useState('false')
-    
+const DashBoardMassage = () => {
     return (
-        <div class="w-full bg-[#F9F9F9] h-full ">
-            <div class="  w-full">
-                <div class="w-full px-[16px]">
+        <div>
+            <div class=" bg-[#F9F9F9]">
+                <div class="w-full mt-[2px] px-[16px]">
                     <div class="">
                         <p class="text-lg  mb-[24px] font-bold">Messages</p>
                     </div>
@@ -26,7 +13,7 @@ const Message = () => {
                         <div class=" h-20 border-b-2 border-solid border-[rgba(34,34,34,.05)]">
                             <div class=" pt-3 content-center   ">
 
-                                <div className={isActive ? 'w-6/12 mx-auto flex' : 'hidden'} id="input-search" >
+                                <div id="input-search" class=" w-6/12 mx-auto flex hidden ">
                                     <div class="mt-5">
                                         <svg class="search-post-icon " width="16" height="16" viewBox="0 0 16 16" fill="none"
                                             xmlns="http://www.w3.org/2000/svg">
@@ -44,7 +31,7 @@ const Message = () => {
                                     </div>
 
                                     <input type="text " placeholder="Type here" class="input w-full focus:outline-none  " />
-                                    <div onClick={ShowSearch} class="relative mt-3 mr-4 ">
+                                    <div onclick="hidesearch()" class="relative mt-3 mr-4 ">
                                         <svg class="search-close cursor-pointer " width="16" height="16" viewBox="0 0 16 16"
                                             fill="none" xmlns="http://www.w3.org/2000/svg">
                                             <path
@@ -53,12 +40,12 @@ const Message = () => {
                                         </svg>
                                     </div>
                                 </div>
-                                <div className={isActive ? 'hidden' : 'flex justify-between mx-[32px]'} id="btn-search">
+                                <div class="flex justify-between mx-[32px]" id="btn-search">
                                     <div class="flex pt-3 ">
-                                        <Link to=""
-                                            class="text-black mr-[12px]  text-[16px] font-semibold after:content-[''] after:w-full after:block after:h-[2px] after:bg-black after:mt-[30px] active   ">All</Link>
-                                        <Link to="/SideNavbar/Unread"
-                                            class=" text-gray-400 text-[16px] font-semibold hover:text-black  ">Unread</Link>
+                                        <a href=""
+                                            class="text-black mr-[12px]  text-[16px] font-semibold after:content-[''] after:w-full after:block after:h-[2px] after:bg-black after:mt-[30px] active   ">All</a>
+                                        <a href="./unread.html"
+                                            class=" text-gray-400 text-[16px] font-semibold hover:text-black  ">Unread</a>
                                     </div>
 
                                     <div class="flex ">
@@ -79,20 +66,22 @@ const Message = () => {
 
                                         <span class="w-[40px] h-[50px] tooltip " data-tip="Search">
 
-                                            <button onClick={ShowSearch} className='btn bg-transparent hover:bg-gray-100 border-none rounded-full'>                                              <svg class="search-post-icon cursor-pointer " width="16" height="16"
-                                                viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                                <path fill-rule="evenodd" clip-rule="evenodd"
-                                                    d="M7.2 14.4C3.22355 14.4 0 11.1764 0 7.2C0 3.22355 3.22355 0 7.2 0C11.1764 0 14.4 3.22355 14.4 7.2C14.4 8.90002 13.8108 10.4624 12.8255 11.6942L15.7657 14.6344C16.0781 14.9468 16.0781 15.4533 15.7657 15.7657C15.4533 16.0781 14.9467 16.0781 14.6343 15.7657L11.6941 12.8255C10.4624 13.8108 8.9 14.4 7.2 14.4ZM7.20156 12.7996C10.2944 12.7996 12.8016 10.2924 12.8016 7.19961C12.8016 4.10681 10.2944 1.59961 7.20156 1.59961C4.10877 1.59961 1.60156 4.10681 1.60156 7.19961C1.60156 10.2924 4.10877 12.7996 7.20156 12.7996Z"
-                                                    fill="#717171"></path>
-                                                <mask id="mask0" mask-type="alpha" maskUnits="userSpaceOnUse" x="0" y="0"
-                                                    width="16" height="16">
+                                            <div onclick="ShowSearch()"
+                                                class="   btn  bg-transparent hover:bg-gray-100 border-none rounded-full ">
+                                                <svg class="search-post-icon cursor-pointer " width="16" height="16"
+                                                    viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
                                                     <path fill-rule="evenodd" clip-rule="evenodd"
                                                         d="M7.2 14.4C3.22355 14.4 0 11.1764 0 7.2C0 3.22355 3.22355 0 7.2 0C11.1764 0 14.4 3.22355 14.4 7.2C14.4 8.90002 13.8108 10.4624 12.8255 11.6942L15.7657 14.6344C16.0781 14.9468 16.0781 15.4533 15.7657 15.7657C15.4533 16.0781 14.9467 16.0781 14.6343 15.7657L11.6941 12.8255C10.4624 13.8108 8.9 14.4 7.2 14.4ZM7.20156 12.7996C10.2944 12.7996 12.8016 10.2924 12.8016 7.19961C12.8016 4.10681 10.2944 1.59961 7.20156 1.59961C4.10877 1.59961 1.60156 4.10681 1.60156 7.19961C1.60156 10.2924 4.10877 12.7996 7.20156 12.7996Z"
-                                                        fill="white"></path>
-                                                </mask>
-                                                <g mask="url(#mask0)"></g>
-                                            </svg>
-                                            </button>
+                                                        fill="#717171"></path>
+                                                    <mask id="mask0" mask-type="alpha" maskUnits="userSpaceOnUse" x="0" y="0"
+                                                        width="16" height="16">
+                                                        <path fill-rule="evenodd" clip-rule="evenodd"
+                                                            d="M7.2 14.4C3.22355 14.4 0 11.1764 0 7.2C0 3.22355 3.22355 0 7.2 0C11.1764 0 14.4 3.22355 14.4 7.2C14.4 8.90002 13.8108 10.4624 12.8255 11.6942L15.7657 14.6344C16.0781 14.9468 16.0781 15.4533 15.7657 15.7657C15.4533 16.0781 14.9467 16.0781 14.6343 15.7657L11.6941 12.8255C10.4624 13.8108 8.9 14.4 7.2 14.4ZM7.20156 12.7996C10.2944 12.7996 12.8016 10.2924 12.8016 7.19961C12.8016 4.10681 10.2944 1.59961 7.20156 1.59961C4.10877 1.59961 1.60156 4.10681 1.60156 7.19961C1.60156 10.2924 4.10877 12.7996 7.20156 12.7996Z"
+                                                            fill="white"></path>
+                                                    </mask>
+                                                    <g mask="url(#mask0)"></g>
+                                                </svg>
+                                            </div>
 
                                         </span>
 
@@ -206,12 +195,11 @@ const Message = () => {
                                     </mask>
                                     <g mask="url(#mask0)"></g>
                                 </svg>
-                                <input type="search" class="ml-[-24px] pl-[24px] bg-transparent w-full " placeholder="Search by name or email" />
+                                <input type="search" class="ml-[-24px] pl-[24px] bg-transparent w-full " placeholder="Search by name or email"/>
                             </div>
                         </div>
 
                         <div class="px-[36px] pb-[20px] ">
-
                             <div>
                                 <div
                                     class="border-[1.5px] border-[rgba(34,34,34,.05)] pl-[10px] pb-[16px]  flex justify-between ">
@@ -256,7 +244,6 @@ const Message = () => {
 
                     </label>
                 </label>
-
             </div>
 
 
@@ -279,17 +266,17 @@ const Message = () => {
                         </div>
 
                         <div class="mx-[36px] mt-2  justify-between cursor-pointer " id="window" >
-                            <div onClick={Messaging} class=" dropdown dropdown-bottom dropdown-end flex w-full h-12 border border-gray-100 p-2 rounded cursor-pointer " >
+                            <div class=" dropdown dropdown-bottom dropdown-end flex w-full h-12 border border-gray-100 p-2 rounded cursor-pointer " >
 
-                                <div tabindex="0" class=" flex justify-between w-full " >
+                                <div tabindex="0" class=" flex justify-between w-full " onclick="show()" >
                                     <label id="value">
-                                        {option?'Yes, my supporters can message me':'No, only if I message first'}
+                                        Yes, my supporters can message me
                                     </label>
 
 
 
                                     <div class="" >
-                                        <svg className={click?' relative mt-3 delay-75 rotate-180 transition':'relative mt-3 delay-75  transition'}   width="10" height="6" viewBox="0 0 10 6" fill="none" id="arrow"
+                                        <svg class=" relative mt-3 delay-75  " width="10" height="6" viewBox="0 0 10 6" fill="none" id="arrow"
                                             xmlns="http://www.w3.org/2000/svg">
                                             <path
                                                 d="M0.292893 0.292893C-0.0732234 0.65901 -0.0961055 1.23839 0.224246 1.63116L0.292893 1.70711L4.29289 5.70711C4.65901 6.07322 5.23839 6.09611 5.63116 5.77575L5.70711 5.70711L9.70711 1.70711C10.0976 1.31658 10.0976 0.683418 9.70711 0.292893C9.34099 -0.0732234 8.76162 -0.0961055 8.36884 0.224246L8.29289 0.292893L5 3.586L1.70711 0.292893C1.34099 -0.0732234 0.761615 -0.0961055 0.368842 0.224246L0.292893 0.292893Z"
@@ -298,9 +285,9 @@ const Message = () => {
                                     </div>
 
                                 </div>
-                                <ul tabindex="0" className={click?'mt-2 dropdown-content menu  border border-gray-100 bg-base-100 rounded w-full py-1':'hidden' }  id="dropdown" aria-expanded="false">
-                                    <li onClick={()=>setoption(false)}><a>No, only if I message first</a></li>
-                                    <li onClick={()=>setoption(true)}><a>Yes, my supporters can message me</a></li>
+                                <ul tabindex="0" class="mt-2 dropdown-content menu  border border-gray-100 bg-base-100 rounded w-full py-1 hidden " id="dropdown" aria-expanded="false">
+                                    <li onclick="no()"><a>No, only if I message first</a></li>
+                                    <li onclick="yes()"><a>Yes, my supporters can message me</a></li>
                                 </ul>
 
 
@@ -320,9 +307,15 @@ const Message = () => {
             </div>
 
 
-        </div >
-    );
 
+     </div >
+     
+
+     
+
+    );
+    
 };
 
-export default Message;
+
+export default DashBoardMassage;
