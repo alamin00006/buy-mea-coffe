@@ -15,7 +15,7 @@ import './SideNavbar.css'
 import { Link, Outlet } from 'react-router-dom';
 const SideNavbar = () => {
     return (
-                <div className='lg:mx-28'>
+                <div className='lg:mx-24'>
                                 
             <div className="drawer drawer-mobile">
             <input id="my-drawer-2" type="checkbox" className="drawer-toggle" />
@@ -28,7 +28,7 @@ const SideNavbar = () => {
             </div> 
             <div className="drawer-side">
             <label htmlFor="my-drawer-2" className="drawer-overlay"></label> 
-            <ul className="menu p-4 w-80 bg-base-100 text-base-content">
+            <ul className=" p-4 w-80 bg-base-100 ">
                 {/* <!-- Sidebar content here --> */}
                 <aside class="w-64 side-Navbar" aria-label="Sidebar">
                     <div class=" py-4 px-3 rounded ">
