@@ -1,7 +1,7 @@
 import React from 'react';
 import { BsArrowRight } from "react-icons/bs";
-import img1 from '../img/mem-onboard-1.png'
-import img2 from '../img/mem-onboard-2.png'
+import img1 from '../../../../images/mem-onboard-1.png'
+import img2 from '../../../../images/mem-onboard-2.png'
 
 const Membership = () => {
     return (
