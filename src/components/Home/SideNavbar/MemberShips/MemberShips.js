@@ -6,7 +6,7 @@ import img2 from '../../../../images/mem-onboard-2.png'
 const Membership = () => {
     return (
         <div className='mx-auto'>
-            <div class="card m-5 bg-base-100 shadow-xl">
+            <div class="card  bg-base-100 shadow-xl">
                 <div class="card-body items-center text-center">
                     <h2 class="card-title text-4xl">Enable membership</h2>
                     <p>HIGHLY RECOMMENDED</p>

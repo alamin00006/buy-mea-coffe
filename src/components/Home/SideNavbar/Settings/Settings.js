@@ -5,7 +5,7 @@ import "./Settings.css"
 
 const Settings = () => {
     return (
-        <div className='bg-white w-full h-[100vh] mx-auto'>
+        <div className='card bg-white w-full h-[100vh] mx-auto'>
        
       <div class="card-body m-10 bg-white">
 
@@ -14,7 +14,7 @@ const Settings = () => {
         <Link class="tab tab-bordered tab-active" to="/sideNavbar/settings">Settings</Link>
         </div>
            <h3 className='text-xl card-title'>Price per coffee</h3>
-            <p>Change the default price of a coffee to an amount of your choice.
+            <p>Change the default price of a coffee to an amount of your choice.</p>
 
 
             <div>
@@ -31,25 +31,24 @@ const Settings = () => {
             
 
 
-            <div className='flex flex-nowrap'>
+            <div className='flex flex-nowrap '>
                 <h3 className='text-xl card-title '>Thank you message</h3>
                 
-                <label for="my-modal-6" class="btn gap-2 text-white  bg-gray-500 hover:bg-gray-400 px-5 py-2 rounded-full cursor-pointer  absolute mx-40 my-2 right-0"><AiFillEye/>
+                <label for="my-modal-3" class="btn gap-2 text-white  bg-gray-500 hover:bg-gray-400 px-5 py-2 rounded-full cursor-pointer  absolute mx-40 my-2 right-0"><AiFillEye/>
                         <div>Preview</div></label>
 
-                  <input type="checkbox" id="my-modal-6" class="modal-toggle" />
-                <div class="modal modal-bottom sm:modal-middle ">
-                  <div class="modal-box ">
-                    <h3 class="font-bold text-lg">Congratulations random Internet user!</h3>
+                <div className=''>
+                <input type="checkbox" id="my-modal-3" class="modal-toggle" />
+                <div class="modal ">
+                <div class="modal-box relative mx-auto px-20">
+                    <label for="my-modal-3" class="btn btn-sm btn-circle absolute right-2 top-2">✕</label>
+                    <h3 class="text-lg font-bold">Congratulations random Internet user!</h3>
                     <p class="py-4">You've been selected for a chance to get one year of subscription to use Wikipedia for free!</p>
-                    <div class="modal-action">
-                      <label for="my-modal-6" class="btn">Yay!</label>
-                    </div>
-                  </div>
-                </div>  
-              
-            </div>
-</p> 
+                </div>
+                </div>
+                </div>
+                </div>
+ 
 
 <div className='m-10'>
     <p>This will be visible after the payment and in the receipt email. Write a personable thank you message, and include any rewards if you like.</p>
